@@ -10,9 +10,8 @@ export const Add = (string) => {
     return parseInt(string);
   }
 
-  //If the string contains the control code beginning, replace the possible custom delimiters
+  //if the string contains the control code beginning, replace the possible custom delimiters
   if (string.substring(0, 2) == "//") {
-    //detects if hyphens are a minus sign or custom delimiter
     //remove slashes
     string = string.substring(2);
     //Replace any non-numbers (except for hyphens which determine negatives) with a comma. Then replace multiple commas in a row with a single comma
