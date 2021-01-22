@@ -13,9 +13,14 @@ describe("String Calculator, Add - basic functionality", () => {
     expect(typeof actual).to.deep.equal(expected);
   });
 
-  it("Correctly handles only one number being passed in", () => {
+  it("Correctly handles only one number being passed in (one digit)", () => {
     const expected = 4;
     const actual = Add("4");
+    expect(actual).to.deep.equal(expected);
+  });
+  it("Correctly handles only one number being passed in (multiple digits)", () => {
+    const expected = 306;
+    const actual = Add("306");
     expect(actual).to.deep.equal(expected);
   });
   it("Correctly handles a long list of numbers (ex. 10)", () => {
