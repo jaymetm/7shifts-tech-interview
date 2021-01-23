@@ -7,7 +7,12 @@ export const Add = (string) => {
   }
   //handles a string that is a single number
   if (!string.includes(",") && !string.includes("//")) {
-    return parseInt(string);
+    //makes sure single number is less than 1000
+    if (parseInt(string) < 1000) {
+      return parseInt(string);
+    } else {
+      return 0;
+    }
   }
 
   //if the string contains the control code beginning, replace the possible custom delimiters

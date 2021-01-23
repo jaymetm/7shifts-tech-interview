@@ -99,6 +99,11 @@ describe("Bonus Section Tests", () => {
     const actual = Add("2,1001");
     expect(actual).to.deep.equal(expected);
   });
+  it("Ignores single number string greater than 1000", () => {
+    const expected = 0;
+    const actual = Add("1001");
+    expect(actual).to.deep.equal(expected);
+  });
   it("Delimiters can be arbitrary length", () => {
     const expected = 6;
     const actual = Add("//***\n1***2***3");
